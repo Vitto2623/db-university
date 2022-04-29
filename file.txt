@@ -14,7 +14,9 @@ SELECT * FROM `courses` WHERE `cfu` > 10;
 
 3. Selezionare tutti gli studenti che hanno più di 30 anni;
 
-SELECT * FROM `students` WHERE `date_of_birth` > 30;
+SELECT * 
+FROM `students` 
+WHERE YEAR(`date_of_birth`) <= 1992
 
 ////
 
@@ -62,7 +64,7 @@ GROUP BY YEAR(`enrolment_date`);
 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 
 SELECT COUNT(*) as `insegnanti`, `office_address` FROM `teachers` 
-GROUP BY `office_address`;
+GROUP BY `office_address`;          
 
 ////
 
